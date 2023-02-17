@@ -1,0 +1,38 @@
+\documentclass[12pt,executivepaper,oneside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+\usepackage{listings,xcolor}
+
+\begin{document}
+\chapter*{Step 1}
+\begin{enumerate}
+\item How	many	documents	are	present	in	each	collection?	
+
+
+%\lstinputlisting[language=json]{step1/1.js}
+
+\lstset{
+	basicstyle=\small\ttfamily, 
+	
+    string=[s]{"}{"},
+    stringstyle=\color{blue},
+    comment=[l]{:},
+    commentstyle=\color{black},
+}
+
+\begin{lstlisting}
+c= {"ActiveBookings" : db.getCollection('ActiveBookings').find({}).count(),
+    "PermanentBookings" : db.getCollection('PermanentBookings').find({}).count(),
+    "ActiveParkings" : db.getCollection('ActiveParkings').find({}).count(),
+    "PermanentParkings" : db.getCollection('PermanentParkings').find({}).count()}
+\end{lstlisting}
+\item Why	the	number	of	documents	in	PermanentParkings	and	PermanentBooking	is	similar?	
+\item For	which	cities	the	system	is	collecting	data?	
+\item When	the	collection	started?	What	about	the	timezone	of	the	timestamps?
+\end{enumerate}
+
+\end{document}
