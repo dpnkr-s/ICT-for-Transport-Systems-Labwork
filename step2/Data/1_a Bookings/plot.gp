@@ -1,0 +1,1 @@
+plot "1_a_milano.data" using 1:2 title 'Booked cars per hour'
